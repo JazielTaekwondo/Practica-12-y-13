@@ -3,6 +3,8 @@ package poo.sistema.roles;
 import java.util.Scanner;
 
 public class Cliente extends Persona {
+    @Override //Carrito de compra
+    public void accion1(){}
     @Override
     public void opciones(){ 
         System.out.println("\n-USUARIO-");
@@ -20,6 +22,7 @@ public class Cliente extends Persona {
             switch (op) {
                 case "1":
                     System.out.println("opcion 1");
+                    accion1();
                     break;
                 case "2":
                     System.out.println("opcion 2");

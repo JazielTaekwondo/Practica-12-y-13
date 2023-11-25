@@ -4,6 +4,7 @@ import java.util.Scanner;
 public abstract class Persona {
     public abstract void menu(Scanner leer);
     public abstract void opciones();
+    public abstract void accion1();
     public final void login(Scanner leer){
         Cliente consumidor = new Cliente(); 
         Empleado esclavo = new Empleado(); 

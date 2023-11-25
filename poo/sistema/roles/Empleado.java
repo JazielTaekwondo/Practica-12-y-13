@@ -2,6 +2,8 @@ package poo.sistema.roles;
 import java.util.Scanner;
 
 public class Empleado extends Persona{
+    @Override//INVENTARIO
+    public void accion1(){}
     @Override
     public void opciones(){
         System.out.println("\n-PERSONAL-"); 
@@ -18,6 +20,7 @@ public class Empleado extends Persona{
             switch (op) {
                 case "1":
                     System.out.println("opcion 1");
+                    accion1();
                     break;
                 default:
                     break;
