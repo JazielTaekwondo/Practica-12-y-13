@@ -2,12 +2,19 @@ package poo.sistema.roles;
 import java.util.Scanner;
 
 public class Empleado extends Persona{
+
+    public Empleado(){
+        super("3030");
+    }
+
     @Override//INVENTARIO
-    public void accion1(){}
+    public void accion1(){
+        System.out.println("INVENTARIO");
+    }
     @Override
     public void opciones(){
         System.out.println("\n-PERSONAL-"); 
-        System.out.println("1. Inventario");
+        System.out.println("1. INVENTARIO");
         System.out.println("2. CERRAR SESION\n");
         System.out.print ("ELIGE UNA OPCION: ");
     }

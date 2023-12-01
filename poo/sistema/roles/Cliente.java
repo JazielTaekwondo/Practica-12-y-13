@@ -3,8 +3,15 @@ package poo.sistema.roles;
 import java.util.Scanner;
 
 public class Cliente extends Persona {
+
+    public Cliente(){
+        super("2020");
+    }
+
     @Override //Carrito de compra
-    public void accion1(){}
+    public void accion1(){
+        System.out.println("Carrito de compras");
+    }
     @Override
     public void opciones(){ 
         System.out.println("\n-USUARIO-");
