@@ -15,7 +15,7 @@ public abstract class Persona {
 
     public abstract void opciones();
 
-    public abstract void accion1();
+    public abstract void accion1(Scanner leer);
 
     public final void login(Scanner leer){
         Cliente consumidor = new Cliente(); 

@@ -8,8 +8,25 @@ public class Empleado extends Persona{
     }
 
     @Override//INVENTARIO
-    public void accion1(){
-        System.out.println("INVENTARIO");
+    public void accion1(Scanner leer){
+        String op;
+        do {
+            System.out.println("INVENTARIO");
+            System.out.println("0. SALIR");
+            System.out.println("1. REGISTRAR ");
+            System.out.println("2. BORRAR");
+            System.out.println("3. ORDENAR");
+            System.out.println("5. INVENTARIO");
+            System.out.print("ELIGE UNA OPCION: ");
+            op=leer.nextLine();
+            switch (op) {
+                case "1":
+                    System.out.println();
+                    break;
+                default:
+                    break;
+            }
+        } while (!op.equals("0"));
     }
     @Override
     public void opciones(){
@@ -27,7 +44,7 @@ public class Empleado extends Persona{
             switch (op) {
                 case "1":
                     System.out.println("opcion 1");
-                    accion1();
+                    accion1(leer);
                     break;
                 default:
                     break;
