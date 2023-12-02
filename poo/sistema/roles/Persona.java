@@ -1,4 +1,6 @@
 package poo.sistema.roles;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class Persona {
@@ -17,9 +19,26 @@ public abstract class Persona {
 
     public abstract void accion1(Scanner leer);
 
+    public abstract void mostrar();
+
+    public abstract void agregar(Scanner leer);
+
+    public abstract void borrar(Scanner leer);
+
     public final void login(Scanner leer){
-        Cliente consumidor = new Cliente(); 
-        Empleado esclavo = new Empleado(); 
+        List<Articulo> inventario = new ArrayList<>();
+        inventario.add(new Articulo("HUEVO", 45));
+        inventario.add(new Articulo("LECHE", 20));
+        inventario.add(new Articulo("PAN", 15));
+        inventario.add(new Articulo("JAMON", 100));
+
+        inventario.get(0).setCantidad(1);
+        inventario.get(1).setCantidad(2);
+        inventario.get(2).setCantidad(3);
+        inventario.get(3).setCantidad(0);
+
+        Cliente consumidor = new Cliente(inventario); 
+        Empleado esclavo = new Empleado(inventario); 
         String op;
         do {
             System.err.println("\n--LOGIN--");
@@ -49,4 +68,5 @@ public abstract class Persona {
         } while (!clave.equals(c));
         System.out.println("\nBIENVENIDO");
     }
+
 }
